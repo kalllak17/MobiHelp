@@ -6,8 +6,47 @@
     <title>Tutor Availability</title>
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <style>
+
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            gap: 5%;
+        }
+
+        .text-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex: 1;
+
+        }
+
+
+        .responsive-text {
+            font-size: 7vw;
+            font-weight: 900;
+            margin: 0;
+        }
+
+
         .blink_me {
-            animation: blinker 1s linear infinite;
+            animation: blinker 2.5s linear infinite;
         }
 
         @keyframes blinker {
@@ -16,21 +55,21 @@
             }
         }
 
-        .responsive-text {
-            font-size: 7vw;
-            font-weight: 900;
-        }
+
+
     </style>
 </head>
 <body>
 
-<div class="d-flex bd-highlight" style="max-height: 100%;">
-    <div class="p-2 flex-fill bd-highlight display-1">
-        <span class="responsive-text" style="">MOBI HELP TUTOR AVAILABLE</span>
+<div class="container">
+    <div class="text-container">
+        <span class="responsive-text">MOBI HELP TUTOR AVAILABLE</span>
         <br>
         <img src="assets/img/arrow_right.png" alt="arrow_right" class="img-fluid blink_me">
     </div>
-    <div class="p-2 flex-fill bd-highlight"><img src="assets/img/qr_2000x2000.png" alt="QR Code" class="img-fluid">
+
+    <div class="text-container">
+        <img src="assets/img/qr_2000x2000.png" alt="QR Code" class="img-fluid qr-image">
     </div>
 </div>
 
