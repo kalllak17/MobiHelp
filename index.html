@@ -56,6 +56,10 @@
         }
 
 
+        .rotated {
+            transform: rotate(180deg);
+            transition: transform 0.3s ease-in-out;
+        }
 
     </style>
 </head>
@@ -65,7 +69,8 @@
     <div class="text-container">
         <span class="responsive-text">MOBI HELP TUTOR AVAILABLE</span>
         <br>
-        <img src="assets/img/arrow_right.png" alt="arrow_right" class="img-fluid blink_me">
+        <img id="arrowImage" src="assets/img/arrow_right.png" alt="arrow_right" class="img-fluid blink_me">
+
     </div>
 
     <div class="text-container">
@@ -74,5 +79,11 @@
 </div>
 
 <script src="assets/js/bootstrap.bundle.min.js"></script>
+<script>
+    const arrowImage = document.getElementById('arrowImage');
+    arrowImage.addEventListener('click', function () {
+        arrowImage.classList.toggle('rotated');
+    });
+</script>
 </body>
 </html>
